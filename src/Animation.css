@@ -1,0 +1,78 @@
+.box {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.background {
+    width: 100%;
+    max-width: 500px;
+}
+
+.bike {
+    position: absolute;
+    top: 24%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100px;
+    animation: animate 3s linear 2s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate3D(0, 0, 0);
+      }
+    100% {
+      transform: translate3D(400px, 94px, 0);
+    }
+  }
+
+
+  @media only screen and (max-width:500px)  {
+    .box {
+        max-width: 100%;
+    }
+    
+    .background {
+        max-width: 100%;
+    }
+    
+    .bike {
+        width: 20%;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: translate3D(0, 0, 0);
+          }
+        100% {
+          transform: translate3D(370px, 90px, 0);
+        }
+      }
+}
+
+@media only screen and (max-width:415px)  {
+    @keyframes animate {
+        0% {
+            transform: translate3D(0, 0, 0);
+          }
+        100% {
+          transform: translate3D(325px, 80px, 0);
+        }
+      }
+}
+
+
+@media only screen and (max-width:380px)  {
+    @keyframes animate {
+        0% {
+            transform: translate3D(0, 0, 0);
+          }
+        100% {
+          transform: translate3D(305px, 72px, 0);
+        }
+      }
+}
